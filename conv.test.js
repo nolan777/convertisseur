@@ -1,6 +1,6 @@
 const { test } = require('@jest/globals');
-const arabicToRoman = require('./App');
-const romanToArabic = require('./App.js');
+const arabicToRoman = require('./arabicToRoman');
+const romanToArabic = require('./romanToArabic');
 
 test('shoud return I when : 1 entered', () => {
     expect (arabicToRoman(1)).toBe('I');
@@ -66,3 +66,6 @@ test('shoud return 1 when : I entered', () => {
     expect (romanToArabic('I')).toBe(1);
 });
 
+test('shoud return 962 when : CMLXII entered', () => {
+    expect (romanToArabic('CMLXII')).toBe(962);
+});
